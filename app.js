@@ -787,7 +787,8 @@ $("save-full").addEventListener("click", async () => {
   const g = c.getContext("2d");
   g.drawImage(state.img, 0, 0);
   // 画面と同じ詳細度：画像全体を「現在の拡大率で表示した幅」でレイアウトする
-  const layoutW = Math.max(900, Math.min(state.W * state.scale, 12000));
+  // 拡大しすぎると文字が小さくなりすぎるので、画像幅の 1.2 倍までに抑える
+  const layoutW = Math.max(900, Math.min(state.W * state.scale, state.W * 1.2));
   const ui = state.W / layoutW;
   renderOverlay(g, { s: 1, tx: 0, ty: 0, ui, w: c.width, h: c.height }, null);
   drawCredit(g, c.width, c.height, Math.max(ui, state.W / 1800));
