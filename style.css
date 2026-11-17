@@ -116,3 +116,5 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
   .panel { width: auto; max-height: 38vh; border-left: 0; border-top: 1px solid var(--line); }
   .topbar h1 span { display: none; }
 }
+.shared-note { margin: 14px 0 0; padding: 8px 10px; border-radius: 8px; font-size: 13px; line-height: 1.6;
+  background: rgba(124,196,255,.08); border: 1px solid rgba(124,196,255,.35); color: #cfe6ff; }

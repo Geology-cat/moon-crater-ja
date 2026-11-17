@@ -65,6 +65,10 @@ const NOTABLE = new Set(["Tycho", "Copernicus", "Kepler", "Aristarchus", "Plato"
   "Macrobius", "Taruntius", "Censorinus", "Dionysius", "Godin", "Agrippa", "Triesnecker", "Manilius", "Bessel",
   "Timocharis", "Lambert", "Euler", "Marius", "Reiner Gamma", "Mösting", "Mosting", "Lansberg", "Moretus"]);
 
+// 共有用 HTML として開かれたときは、画像・解析結果・地名データが埋め込まれている
+const SHARED = window.MOON_SHARED || null;
+const fetchJson = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url + ": HTTP " + r.status); return r.json(); });
+
 // ---------- 状態 ----------
 const state = {
   features: [],       // 地名（単位ベクトルなどを前計算）
@@ -86,8 +90,7 @@ const canvas = $("view");
 const ctx = canvas.getContext("2d");
 
 // ---------- 地名データの読み込み ----------
-const featuresReady = fetch("data/features.json")
-  .then((r) => r.json())
+const featuresReady = (SHARED ? Promise.resolve(SHARED.features) : fetchJson("data/features.json"))
   .then((json) => {
     state.features = json.features.map((f) => {
       const [ja, name, lon, lat, d, code, ext] = f;
@@ -113,8 +116,7 @@ const featuresReady = fetch("data/features.json")
 // ---------- 海の輪郭（LROC）の読み込み ----------
 // rings: { name: 海の番号, v: 単位ベクトル列, c: 中心方向, r: 角半径 }
 state.mare = null;
-const mareReady = fetch("data/mare.json")
-  .then((r) => r.json())
+const mareReady = (SHARED ? Promise.resolve(SHARED.mare) : fetchJson("data/mare.json"))
   .then((json) => {
     state.mare = {
       names: json.names,
@@ -247,9 +249,7 @@ async function handleFile(file) {
     state.proj = makeProjection(state.view);
     const sun = res.sun;
     state.sunVec = sun && sun.terminator !== false ? vec(sun.lon, sun.lat || 0) : null;
-    showViewer(true);
-    fitView();
-    updateInfo();
+    startViewer();
     busy(null);
   } catch (err) {
     console.error(err);
@@ -545,9 +545,19 @@ if (window.ResizeObserver) new ResizeObserver(() => { if (!canvas.hidden) resize
 else window.addEventListener("resize", () => { if (!canvas.hidden) resizeCanvas(); });
 window.addEventListener("orientationchange", () => setTimeout(() => { if (!canvas.hidden) resizeCanvas(); }, 300));
 
+function startViewer() {
+  showViewer(true);
+  fitView();
+  updateInfo();
+}
+
+function fitScale() {
+  const r = canvas.getBoundingClientRect();
+  return Math.min(r.width / state.W, r.height / state.H) * 0.96;
+}
 function fitView() {
   const r = canvas.getBoundingClientRect();
-  const s = Math.min(r.width / state.W, r.height / state.H) * 0.96;
+  const s = fitScale();
   state.scale = s;
   state.tx = (r.width - state.W * s) / 2;
   state.ty = (r.height - state.H * s) / 2;
@@ -1112,16 +1122,19 @@ function drawCredit(g, w, h, ui) {
   g.fillText(text, w - 8 * ui, h - 8 * ui);
 }
 
+function downloadBlob(blob, name) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
 function saveCanvas(c, suffix) {
   const type = $("fmt").value;
   const ext = type === "image/png" ? "png" : "jpg";
   c.toBlob((blob) => {
     if (!blob) { alert("画像の書き出しに失敗しました。"); return; }
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `${state.fileName}_${suffix}.${ext}`;
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(a.href), 20000);
+    downloadBlob(blob, `${state.fileName}_${suffix}.${ext}`);
   }, type, 0.93);
 }
 
@@ -1177,3 +1190,147 @@ $("save-view").addEventListener("click", async () => {
 
 // フォント読み込み後に再描画（初回の描画が代替フォントになるのを防ぐ）
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(requestDraw);
+
+// ---------- 共有用 HTML（1 ファイルで拡大・地名表示がそのまま使える） ----------
+const SHARE_MAX_PIXELS = Math.min(24e6, CANVAS_MAX_PIXELS);  // 埋め込む画像の上限
+
+// JSON を <script> に安全に埋め込む（</script> や古い Safari で問題になる文字を逃がす）
+function jsonForScript(text) {
+  return text.replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+}
+
+function canvasToDataURL(c, type, q) { return c.toDataURL(type, q); }
+
+async function buildShareHtml() {
+  // アプリ本体と地名データを読み込む（同じサイトに置かれているもの）
+  const texts = await Promise.all(["index.html", "style.css", "app.js", "data/features.json", "data/mare.json"].map((u) =>
+    fetch(u).then((r) => { if (!r.ok) throw new Error(u + " を読み込めませんでした"); return r.text(); })));
+  const html = texts[0], css = texts[1], js = texts[2], feats = texts[3], mare = texts[4];
+
+  // 画像を JPEG で埋め込む（大きすぎる場合は縮小）
+  const k = Math.min(1, Math.sqrt(SHARE_MAX_PIXELS / (state.W * state.H)), CANVAS_MAX_SIDE / Math.max(state.W, state.H));
+  const c = document.createElement("canvas");
+  c.width = Math.round(state.W * k); c.height = Math.round(state.H * k);
+  const g = c.getContext("2d");
+  g.imageSmoothingQuality = "high";
+  g.drawImage(state.img, 0, 0, c.width, c.height);
+  const image = canvasToDataURL(c, "image/jpeg", 0.92);
+  const kk = c.width / state.W;
+  c.width = 1; c.height = 1;
+  const v = state.view;
+  const view = Object.assign({}, v, { cx: (v.cx + 0.5) * kk - 0.5, cy: (v.cy + 0.5) * kk - 0.5, R: v.R * kk });
+  // 今の表示範囲（中心と、全体表示に対する倍率）
+  const r = canvas.getBoundingClientRect();
+  const viewport = {
+    x: ((r.width / 2 - state.tx) / state.scale) * kk,
+    y: ((r.height / 2 - state.ty) / state.scale) * kk,
+    rel: state.scale / fitScale(),
+  };
+  const meta = {
+    version: 1,
+    created: new Date().toISOString(),
+    fileName: state.fileName,
+    origW: state.origW || state.W, origH: state.origH || state.H,
+    solve: state.solve, view, viewport,
+    opts: state.opts,
+    image,
+  };
+  const payload = '{"meta":' + JSON.stringify(meta) + ',"features":' + feats.trim() + ',"mare":' + mare.trim() + "}";
+  const sharedScript = "<script>window.MOON_SHARED = " + jsonForScript(payload) + ";</script>";
+  const appScript = "<script>" + js.replace(/<\/script/gi, "<\\/script") + "</script>";
+  let out = html
+    .replace(/<link rel="stylesheet" href="style.css">/, () => "<style>" + css + "</style>")
+    .replace(/<script src="app.js"><\/script>/, () => sharedScript + "\n" + appScript)
+    .replace(/<title>[^<]*<\/title>/, () => "<title>" + escapeHtml(state.fileName) + " — 月面アノテーション（共有）</title>");
+  if (out.indexOf("window.MOON_SHARED") < 0 || out.indexOf("<style>") < 0) throw new Error("共有ファイルの組み立てに失敗しました。");
+  return new Blob([out], { type: "text/html" });
+}
+
+async function makeShareFile() {
+  busy("共有用ファイルを作成中…");
+  try {
+    const blob = await buildShareHtml();
+    return new File([blob], `${state.fileName}_月面アノテーション.html`, { type: "text/html" });
+  } finally {
+    busy(null);
+  }
+}
+
+$("share-html").addEventListener("click", async () => {
+  if (!state.img) return;
+  try {
+    const f = await makeShareFile();
+    downloadBlob(f, f.name);
+    $("share-size").textContent = `作成しました（${(f.size / 1048576).toFixed(1)} MB）`;
+  } catch (e) {
+    console.error(e);
+    alert("共有用ファイルを作成できませんでした：\n" + ((e && e.message) || e));
+  }
+});
+
+// スマホなどの共有メニュー（Web Share API）
+const canShareFiles = !!(navigator.canShare && window.File &&
+  (function () { try { return navigator.canShare({ files: [new File(["x"], "x.html", { type: "text/html" })] }); } catch (e) { return false; } })());
+if (canShareFiles && !SHARED) $("share-native").hidden = false;
+$("share-native").addEventListener("click", async () => {
+  if (!state.img) return;
+  try {
+    const f = await makeShareFile();
+    await navigator.share({ files: [f], title: "月面アノテーション", text: `${state.fileName} の月面アノテーション` });
+  } catch (e) {
+    if (e && e.name === "AbortError") return;  // 共有メニューを閉じただけ
+    console.error(e);
+    alert("共有できませんでした：\n" + ((e && e.message) || e));
+  }
+});
+
+// ---------- 共有ファイルとして開かれたとき ----------
+function syncControls() {
+  const o = state.opts;
+  $("detail").value = String(o.detail);
+  $("detail-out").textContent = DETAIL_JA[String(o.detail)] || String(o.detail);
+  $("fontscale").value = String(o.fontScale);
+  [["lay-labels", "labels"], ["lay-mare", "mare"], ["lay-outlines", "outlines"], ["lay-sat", "sat"], ["lay-night", "night"], ["lay-grid", "grid"], ["lay-limb", "limb"]]
+    .forEach((p) => { $(p[0]).checked = !!o[p[1]]; });
+}
+
+async function openShared() {
+  const m = SHARED.meta;
+  try {
+    busy("共有された注釈を読み込み中…");
+    const im = new Image();
+    await new Promise((resolve, reject) => { im.onload = resolve; im.onerror = () => reject(new Error("埋め込み画像を読み込めませんでした。")); im.src = m.image; });
+    await featuresReady;
+    state.fileName = m.fileName || "moon";
+    state.solve = m.solve;
+    state.img = im; state.W = im.naturalWidth; state.H = im.naturalHeight;
+    state.origW = m.origW; state.origH = m.origH;
+    state.view = m.view;
+    state.proj = makeProjection(state.view);
+    const sun = m.solve.sun;
+    state.sunVec = sun && sun.terminator !== false ? vec(sun.lon, sun.lat || 0) : null;
+    Object.assign(state.opts, m.opts || {});
+    syncControls();
+    startViewer();
+    // 共有したときの表示範囲を再現
+    if (m.viewport) {
+      const r = canvas.getBoundingClientRect();
+      const s = fitScale() * (m.viewport.rel || 1);
+      state.scale = s;
+      state.tx = r.width / 2 - m.viewport.x * s;
+      state.ty = r.height / 2 - m.viewport.y * s;
+      requestDraw();
+    }
+    const note = $("shared-note");
+    const d = new Date(m.created);
+    note.textContent = `共有された注釈です（${isNaN(d) ? "" : d.toLocaleString("ja-JP") + " 作成、"}元ファイル: ${state.fileName}）。拡大・地名の確認・画像の保存ができます。`;
+    note.hidden = false;
+    $("share-section").hidden = true;
+  } catch (e) {
+    console.error(e);
+    alert("共有ファイルを開けませんでした：\n" + ((e && e.message) || e));
+  } finally {
+    busy(null);
+  }
+}
+if (SHARED) openShared();
