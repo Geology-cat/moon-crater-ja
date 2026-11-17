@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>月面クレーター 日本語アノテーション</title>
+<meta name="description" content="月の写真をドロップするだけで、クレーター・海・山などの名前を日本語で自動表示します。SkySolver の月面解析 API を利用しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>月面クレーター <span>日本語アノテーション</span></h1>
+  <div class="top-actions">
+    <label class="btn" for="file-input">画像を選ぶ</label>
+    <input type="file" id="file-input" accept="image/*,.tif,.tiff" hidden>
+  </div>
+</header>
+
+<main id="stage">
+  <!-- 画像未選択時の案内 -->
+  <section id="dropzone" class="dropzone">
+    <div class="drop-inner">
+      <div class="moon-icon" aria-hidden="true"></div>
+      <p class="drop-title">月の写真をここにドラッグ＆ドロップ</p>
+      <p class="drop-sub">全体像・三日月・望遠鏡での拡大写真のいずれも可（JPEG / PNG / WebP / TIFF など）</p>
+      <label class="btn primary" for="file-input">ファイルを選択</label>
+      <ul class="notes">
+        <li>大きな画像は読み込み時に自動で縮小してから解析します。</li>
+        <li>解析のため、縮小した画像（長辺2048px）を <a href="https://skysolver.app/moon" target="_blank" rel="noopener">SkySolver</a> に送信します（同サービスは画像を保存しないと説明しています）。</li>
+        <li>拡大するほど小さなクレーターまで名前が表示されます。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 表示キャンバス -->
+  <canvas id="view" hidden></canvas>
+  <div id="tooltip" class="tooltip" hidden></div>
+
+  <!-- 処理中表示 -->
+  <div id="busy" class="busy" hidden>
+    <div class="spinner"></div>
+    <p id="busy-text">処理中…</p>
+  </div>
+
+  <!-- 全面ドロップ時のハイライト -->
+  <div id="drop-overlay" class="drop-overlay" hidden><p>ここにドロップ</p></div>
+
+  <!-- ズーム操作 -->
+  <div id="zoom-ctrl" class="zoom-ctrl" hidden>
+    <button id="zoom-in" title="拡大">＋</button>
+    <button id="zoom-out" title="縮小">－</button>
+    <button id="zoom-fit" title="全体表示">⤢</button>
+  </div>
+  <div id="coord" class="coord" hidden></div>
+</main>
+
+<aside id="panel" class="panel" hidden>
+  <section>
+    <h2>解析結果</h2>
+    <dl id="info" class="info"></dl>
+    <p id="warn" class="warn" hidden></p>
+  </section>
+  <section>
+    <h2>表示</h2>
+    <label class="row">詳細度
+      <input type="range" id="detail" min="-2" max="2" step="0.5" value="0">
+      <output id="detail-out">標準</output>
+    </label>
+    <label class="check"><input type="checkbox" id="lay-labels" checked> 地名</label>
+    <label class="check"><input type="checkbox" id="lay-outlines" checked> クレーターの輪郭</label>
+    <label class="check"><input type="checkbox" id="lay-sat" checked> 副クレーター（コペルニクスA など）</label>
+    <label class="check"><input type="checkbox" id="lay-night"> 影になっている側の地名も表示</label>
+    <label class="check"><input type="checkbox" id="lay-grid"> 経緯線（月面座標）</label>
+    <label class="check"><input type="checkbox" id="lay-limb" checked> 月の縁・明暗境界線</label>
+    <label class="row">文字サイズ
+      <input type="range" id="fontscale" min="0.8" max="1.6" step="0.1" value="1">
+    </label>
+  </section>
+  <section>
+    <h2>保存</h2>
+    <label class="row">形式
+      <select id="fmt">
+        <option value="image/jpeg">JPEG</option>
+        <option value="image/png">PNG</option>
+      </select>
+    </label>
+    <button id="save-full" class="btn primary block">画像全体を保存</button>
+    <button id="save-view" class="btn block">表示中の範囲を保存</button>
+    <p class="hint">画像全体の保存では、現在の拡大率に応じた詳細度で注釈を描き込みます（最大長辺4096px）。</p>
+  </section>
+  <section class="credits">
+    <p>月面の位置合わせ：<a href="https://skysolver.app/moon" target="_blank" rel="noopener">SkySolver.app</a> Moon API<br>
+    地名：<a href="https://planetarynames.wr.usgs.gov/" target="_blank" rel="noopener">IAU / USGS Gazetteer of Planetary Nomenclature</a><br>
+    日本語名：Wikidata・日本語版Wikipedia ほか</p>
+  </section>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6272 @@
+{
+  "head" : {
+    "vars" : [ "item", "gid", "ja", "alias" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7606008"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ステファン"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5687"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シュテファン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q22712741"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウエスト"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6525"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウェスト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1456399"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ゴッダード"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2199"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ゴダード"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1492289"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ガレ (月のクレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2079"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ガレ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1503535"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "Ritter"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5158"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リッター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1525261"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ジョイア (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2171"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ジョイア"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116178"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラクロア"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3201"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラクロワ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q168032"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スミスの海"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3689"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スミス海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q168416"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "危機の海"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3671"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "危難の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q170067"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "寒さの海"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3674"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "氷の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q198570"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アーノルド"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "387"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アーノルト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q210964"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ネクタリス海"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3683"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "神酒の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q403116"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カセグレイン"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1044"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャッセグレイン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q403116"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カセグレン"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1044"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャッセグレイン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q403116"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カッセグレイン"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1044"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャッセグレイン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q403116"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャセグレイン"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1044"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャッセグレイン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1060158"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チャリス (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1126"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チャリス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1101692"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マリナス"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3712"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マリヌス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1131154"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コペルニクス・クレーター"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1296"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コペルニクス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1180300"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デ・シッテル (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1445"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ド・ジッター (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1200523"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デカルトクレーター"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1498"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デカルト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1272920"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ダレスト (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1695"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ダレスト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1297048"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エーゲデ (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1728"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エゲデ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1333078"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スコールズビー"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5394"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スコアズビー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337671"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "モアニョー"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3947"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "モワニョー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1339467"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルフォンサス (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "206"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルフォンズス火口"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1339467"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルフォンスス (クレータ)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "206"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルフォンズス火口"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1339467"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルフォンスス (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "206"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルフォンズス火口"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1627430"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フック（月のクレーター）"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2548"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フック"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1750303"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピッカリング"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4722"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピカリング"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1953490"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ムラカミ"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4070"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "村上"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3516188"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タウルス・リットロウ渓谷"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5881"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タウルス・リットロウ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3516188"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タウルス・リトロー"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5881"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タウルス・リットロウ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3705476"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デニングトン"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1489"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デニントン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7207724"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ポグソン (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4774"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ポグソン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488299"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "嵐海"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4395"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "嵐の大洋"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q803844"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベイロー (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "560"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バイヨー (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q814070"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベーア (月のクレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "658"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベーア"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q819989"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベリマンクレーター"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "700"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベリマン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1018570"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バード (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "941"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バード"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1022546"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クリスチャン・マイアー (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "951"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クリスチャン・マイヤー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500562"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "モンス・ラ・イール"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3988"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラ・イール山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q630405"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ツィオルコフスキー・クレーター"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6108"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ツィオルコフスキー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q631696"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チコ・クレーター"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6163"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ティコ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q631696"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ティコ・クレーター"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6163"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ティコ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q720218"
+      },
+      "alias" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アサダ (クレーター)"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "413"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アサダ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q73533"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3465"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ロンゴモンタヌス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q74583"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5343"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ソシュール・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q74675"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5305"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サンフォード"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q93700"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3062"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クライン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q112749"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "10"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アボット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q112755"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "9"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アッベ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q115062"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "22"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アブル・ウワファ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q115071"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "16"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アベッティ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q115088"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "12"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アーベル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q115383"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4757"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プラトン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q115734"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1497"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デザルグ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q115779"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4054"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ムーシュ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116169"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4691"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フィロラオス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116443"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3713"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マリオッテ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117895"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5567"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "中央の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q128041"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "381"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アリスティルス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q128099"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2001"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フーコー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q128108"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "382"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アリストテレス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q133615"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "23"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アブルフェーダ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q143729"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1086"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャヴェンディッシュ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q166188"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "47"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アダムズ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q168113"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1438"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デ・ガスパリス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q168375"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3681"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "縁の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q168398"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3676"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フンボルト海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q169625"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3686"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "晴れの海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q181532"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4825"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プリンツ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q182456"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6070"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タウンリー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q184401"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6711"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ゼーマン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q197872"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3677"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "湿りの海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q201509"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5945"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タレス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q210283"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5569"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "露の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q210353"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1099"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ケンソリヌス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q210716"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3684"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "雲の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q211610"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1011"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カペッラ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q218379"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3694"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "蒸気の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q261146"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4633"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "パース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q269314"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1715"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エッカート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q285046"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4256"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ニールセン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q285952"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3670"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "既知の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q286167"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4986"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ライナー (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q287928"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1815"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エピゲネス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q304283"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "40"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アコスタ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q319050"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "14"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アベンエズラ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q320936"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3691"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "静かの海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q326682"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3693"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "波の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q326736"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3690"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "泡の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q326868"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3682"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "モスクワの海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q333819"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3665"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "南の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q333825"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3664"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "蛇の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q333835"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3679"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "賢者の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q333864"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3680"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "島の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q374977"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5258"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サビン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q376626"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4158"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ナスミス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q391502"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2081"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ガロア (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q401942"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "255"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アナクシメネス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q410615"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "119"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エイトケン (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q422126"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2800"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ジャンサン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q428174"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5566"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "月の入り江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q429718"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1972"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フラマリオン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q473198"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3932"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ミッチェル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q473556"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6489"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ワーナー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q473631"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "236"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アンモニウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486581"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3202"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "夏の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486746"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5558"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "熱の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486794"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5559"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "愛の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486828"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5561"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "未開の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486854"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3203"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "秋の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486884"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3204"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "善良の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486911"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5562"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "調和の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q486958"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3205"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "悲しみの湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487025"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4565"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "病の沼"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487063"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3206"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "卓越の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487133"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3207"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "幸福の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487246"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5563"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "信頼の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487823"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3208"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "喜びの湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487858"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3209"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "冬の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487895"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3678"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "雨の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487941"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5565"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "虹の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q487974"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3210"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "柔軟の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488040"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3212"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "死の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488080"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3213"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "忘却の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488143"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3685"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "東の海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488365"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5564"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "栄光の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488391"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3216"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "荒野の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488410"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4567"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "眠りの沼"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488550"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5571"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "成功の入江"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488554"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "252"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アナクサゴラス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q488604"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3220"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "恐怖の湖"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q498923"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3970"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アグネス山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499001"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4003"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルプス山脈"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499037"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4004"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アペニン山脈"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499058"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3973"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルダシール山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499132"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3974"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルゲウス山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499158"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4000"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブラン山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499204"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3975"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブラッドリー山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499309"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4006"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カルパティア山脈"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499360"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3979"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エサム山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q499521"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3983"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ハドリー山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500300"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3985"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ハンステーン山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500388"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3987"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ホイヘンス山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500595"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3989"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マラルディ山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500635"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3976"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ドリル山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500676"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3991"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ペンク山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500701"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3992"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピコ山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500746"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3993"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピトン山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500820"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4843"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘラクレイデス岬"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500868"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4845"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラプラス岬"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q500909"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4012"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピレネー山脈"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q501042"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3994"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リュムケル山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q501125"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4018"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タウルス山地"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q501152"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3996"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴィノグラードフ山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q501224"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3997"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウィトルウィウス山"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q542806"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "380"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アリスタルコス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q571332"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5837"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タルボット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q576043"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5270"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サクロボスコ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q593368"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "874"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブリュースター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q602362"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4860"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プトレマイオス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q605754"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5479"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シャイン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q607485"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4094"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メスティングA"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q618975"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "326"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アポロ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q619461"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "328"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アポロニウス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q621019"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "399"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルテミス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q621017"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "411"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アーリヤバタ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q623480"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "847"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ボーエン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q624662"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3253"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ランベルト (月のクレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q630608"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5955"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "テアイテトス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q630614"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4540"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オデイ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q630965"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2634"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "イブン・フィルナース・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q631753"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2111"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ガッサンディ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q634366"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "350"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルキメデス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q636397"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "351"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルキタス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q642722"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "897"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブルース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q642738"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4072"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マーチソン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q643935"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3869"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メシエ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q644906"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5957"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サービト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q650287"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6362"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴァートレット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q651892"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "533"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バベッジ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q653606"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2471"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エルミート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q656723"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1132"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チャンドラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q659784"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1081"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コーシー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q670404"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6515"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴァイス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q685056"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2101"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "Ganswindt"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q699618"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "391"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q719811"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5230"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ルペス・レクタ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q720250"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5552"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シナス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q733473"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2120"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ガウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q745402"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3559"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マクミラン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q745626"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3595"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メイン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q758285"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "466"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アトウッド"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q782335"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2198"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ゴクレニウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q787075"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "493"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アウトリュコス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q794024"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "524"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アゾーフィー (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q797963"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "199"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アロハ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q798307"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "541"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バック"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q798595"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3307"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラヴォアジエ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q798602"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6437"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フォン・ブラウン (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q805475"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "580"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バルマー・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q808984"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "617"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バロー (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q812129"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "646"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バイエル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q820287"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "701"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベルグストランド"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q830121"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "720"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベッセル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q833425"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4480"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オッペンハイマー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q834286"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3312"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ル・モニエ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q865725"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "754"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バーミンガム (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q865879"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "755"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q866419"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1429"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デービー (クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q881378"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "768"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブランシャール"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q892295"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6440"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フォン・カルマン・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q892625"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1045"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カッシーニ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q893602"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "826"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ボリス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q917658"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "883"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブリスベン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q943035"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "943"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ビュルギウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q950254"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2005"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ファウラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q972621"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3874"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メトン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q978504"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2074"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ガリラエイ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q978544"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4987"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ライナー・ガンマ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q997632"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6484"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ワンフー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1009734"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "920"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ブンゼン (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1020943"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3778"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マクルアー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1022430"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5207"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ロジェストヴェンスキー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1022495"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "950"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "C・ハーシェル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1027762"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5757"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スルピキウス・ガッルス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1031798"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "149"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アル＝フワーリズミー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1032578"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1098"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "セルシウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1035198"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1014"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カプアヌス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1043771"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1022"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カーマイケル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1071944"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1163"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チョーサー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1071949"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1144"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チャップマン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1071954"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1118"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "Chadwick"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1079920"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1323"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クーロン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1085631"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1979"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フレミング"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1085651"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1339"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クルックス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1090931"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4417"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オーム"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1099137"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1236"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クラヴィウス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1100611"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1242"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クラーク"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1109797"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1271"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コリンズ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1113284"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3724"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マルト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1124561"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1285"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コンドン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1133421"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1799"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エンディミオン (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1136701"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5494"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シューメーカー (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1143480"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5680"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スタディウス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1145516"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1352"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カーティス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1145949"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1354"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クザーヌス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1151736"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2210"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ゴルトシュミット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1158814"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2163"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ギル・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1158817"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2159"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ギルバート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1163828"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1400"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ダニエル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1168221"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2251"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "グリッグ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1183857"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1467"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ドランブル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1185919"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1483"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デモクリトス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1227005"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1542"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ディオニシウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1241725"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1575"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ドナ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1252860"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1632"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ドーヴェ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1255838"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1635"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ドレイパー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1257604"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1958"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フィンシュ・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1258601"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5693"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シュタインハイル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1276010"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5791"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シルベスター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1281058"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3537"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リヨ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1304620"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3249"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラマルク"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1309139"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3316"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リーキー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1327789"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4748"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プラナ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1333044"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3488"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラブレース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1333060"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6008"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ティマイオス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1335714"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2913"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ケーン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1335727"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2416"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ハインリヒ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1336369"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3840"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メネラウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337076"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5705"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ステュアート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337116"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5480"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シープシャンクス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337137"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4720"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピカール"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337170"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4670"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ペーテルス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337561"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2516"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヒッパルコス (月)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337604"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6637"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヤンゲリ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1337657"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2980"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ケルディシュ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1341495"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3354"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ルポート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1344615"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3120"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クリーガー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1345034"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1820"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エラトステネス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1362551"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4827"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プロクルス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1372234"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1861"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "エウクテモン (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1373851"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1866"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オイラー (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1375566"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3330"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ルジャンドル (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1390133"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1894"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ファブローニ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1396562"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3644"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マヌエル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1400832"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1928"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フェドロフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1421303"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3532"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ライエルクレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1435875"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1992"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フォントネル (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1440024"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2003"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フーリエ（クレーター）"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1440316"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2007"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フラ・マウロ・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1444421"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "259"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アンダース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1453211"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2018"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フレドホルム"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1454954"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3273"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラングレヌス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1488803"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3523"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ルター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1489909"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6093"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "トルーヴェロ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1501720"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3261"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラメ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1505008"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2511"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ハインド"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1505885"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2696"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "イネス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1507641"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5450"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シャクルトン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1508090"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6634"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "山本"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1508098"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6658"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヤーキス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1513364"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4091"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メドラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1525305"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2172"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ジョルダーノ・ブルーノ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1529153"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3276"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ランスベルク (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1538146"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "14528"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ゴア"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1544474"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2241"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "グリーヴズ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1557168"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2290"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "グーテンベルク (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1565861"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2493"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘヴェリウス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1568044"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4481"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オッポルツァー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1585759"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2370"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ハロルド"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1587150"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "398"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アルタモノフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1588947"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1350"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キュリー（月のクレーター）"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1589103"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5592"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スクロドフスカ(月のクレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1591719"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "14502"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ハワース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1600960"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4689"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フィリップス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1613779"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2475"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘロドトス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1613829"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2476"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘロン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1614806"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2482"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘルツシュプルング"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1628896"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2558"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ホロックス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1634461"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4432"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オルバース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1634485"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4849"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プロタゴラス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1638251"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4595"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "パリー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1638311"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4756"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プラスケット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1649767"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1421"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ダス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1661075"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5022"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リッチョーリ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1668623"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3323"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ルベーグ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1684191"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5655"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サウス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1701027"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4627"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ピアリー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1708039"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "440"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アストン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1723948"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2919"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カント"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1765214"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6123"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "タッカー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1784618"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3090"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コロリョフ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1791317"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3138"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カイパー (月のクレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1806665"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3286"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラッセル (月のクレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1891731"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6463"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴァイサラ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1892265"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3650"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マラルディ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1898215"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6466"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウィリアム・ボンド"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1965766"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1337"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "クロンメリン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1983464"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4232"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ニューカム"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1994781"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4321"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ノビレ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2005107"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4359"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ナン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2054085"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4594"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "パロット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2099046"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4759"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プレイフェア"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2110884"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4826"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プリシラ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2111667"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4828"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プロクター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2131062"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4948"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ランキン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2151737"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6346"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フェンデリヌス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2159971"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5163"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ロビンソン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2160147"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5164"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ロッカ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2160161"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5165"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ロッコ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2177557"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5237"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ルース"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2217659"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5296"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サンプソン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2249967"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "535"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バブコック"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2252374"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1133"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "張衡"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2260757"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5395"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スコット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2276638"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5461"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シェーラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2277317"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5471"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シャープ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2279938"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5499"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ショート"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2330948"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6305"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "バンデグラーフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2360388"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2856"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ジュール・ヴェルヌ・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2368783"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5776"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スーザン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2377576"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5799"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "レオ・シラード・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2517077"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1167"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "チェビシェフ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2528794"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6414"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウィトルウィウス (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2533200"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6442"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フォン・ノイマン・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2542959"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6527"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウェクスラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2542986"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6563"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウィンスロップ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2739654"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "674"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ベリングスハウゼン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2742573"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "749"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ビンガム"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2892130"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "846"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ボウディッチ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2905188"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "759"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ビヤークネス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2923041"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "851"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ボイル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3194616"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2976"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キーラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3208677"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2518"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヒポクラテス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3208975"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4776"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ポワンソ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3208983"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4751"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プランテ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3325927"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4055"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "モールトン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3807368"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2808"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ジャーヴィス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3829313"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3319"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リービット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3880621"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4390"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オーブルチェフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3881498"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4433"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オルコット"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3882715"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4468"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オニヅカ （クレーター）"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4018540"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6495"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ウォーターマン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4066511"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "280"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "アン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4993934"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1515"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デュワー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4993932"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1644"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ドライデン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q4993942"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1473"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "デリンジャー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5686726"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2393"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘイフォード"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5694975"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2400"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヘヴィサイドクレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5940579"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2583"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヒューム"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6415884"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3050"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "カークウッド"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6428160"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3082"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "コマロフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6583509"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6308"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ファンデルワールス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6601560"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6349"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴェントリス"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6602785"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6348"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴェニング・メイネッツ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6609556"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6390"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴィリエフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6692211"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3489"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラヴェル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6801775"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3780"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マッケーラ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6802104"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3781"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "マクラフリン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6804732"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3788"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "メチニコフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6859948"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3903"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ミルズ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6881933"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3935"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ミトラ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6915601"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4048"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "モーズリー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7330277"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5025"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リチャーズ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7336907"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5159"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リッツクレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7384904"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6956"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ライダー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7601946"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5683"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スターク"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7622263"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5722"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ストラットン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7637955"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5761"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サムナー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7639789"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5762"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "スンドマン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7941551"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6439"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "フォン・デァ・パーレン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q8046379"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "6623"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヤブロチコフ"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q10843504"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5372"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シュリーマン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q21659319"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1024"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "キャロル"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q21843210"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "14142"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラモン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q22712726"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "15615"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "リトルウェスト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q24058318"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "1891"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "イーウェン"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q24229340"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3289"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ラスト"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q24237573"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4763"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "プラム"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q65047249"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "15781"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "天河 基地"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q66501675"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "15851"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シオリ (クレーター)"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q71520532"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "15862"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ヴォーン・クレーター"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q85804324"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "5773"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "サーベイヤー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101143586"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "8228"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "シャコルナクA"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q107023153"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "15994"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "天船 基地"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q26210"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "3673"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "豊かの海"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q47592"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "2990"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "ケプラー"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q64067"
+      },
+      "gid" : {
+        "type" : "literal",
+        "value" : "4497"
+      },
+      "ja" : {
+        "xml:lang" : "ja",
+        "type" : "literal",
+        "value" : "オロンティウス・クレーター"
+      }
+    } ]
+  }
+}
