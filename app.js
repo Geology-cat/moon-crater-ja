@@ -8,8 +8,16 @@
 const API_URL = "https://skysolver.app/api/v1/solve/moon";
 const MOON_R_KM = 1737.4;
 const SOLVE_MAX = 2048;          // API へ送る画像の長辺（API 側もこの大きさで解析する）
-const WORK_MAX = 4096;           // 表示・保存用画像の長辺の上限
-const WORK_MAX_PIXELS = 16e6;    // Safari のキャンバス上限対策
+// ブラウザごとのキャンバスの上限（Safari / iOS は約 1677 万画素まで）
+const UA = navigator.userAgent;
+const IS_SAFARI_LIKE = /iPhone|iPad|iPod/.test(UA) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) ||
+  (/Safari/.test(UA) && !/Chrome|Chromium|CriOS|Edg|Firefox|FxiOS/.test(UA));
+const CANVAS_MAX_PIXELS = IS_SAFARI_LIKE ? 16.7e6 : 120e6;
+const CANVAS_MAX_SIDE = 16384;
+// 表示に使う画像の上限。これ以下なら元の解像度のまま表示・保存する。
+const MEM_GB = navigator.deviceMemory || 8;
+const DISPLAY_MAX_PIXELS = IS_SAFARI_LIKE ? 16.7e6 : (MEM_GB <= 2 ? 24e6 : MEM_GB <= 4 ? 40e6 : 80e6);
+const DISPLAY_MAX_SIDE = CANVAS_MAX_SIDE;
 const DEG = Math.PI / 180;
 
 // ---------- 地名の種類 ----------
@@ -202,21 +210,28 @@ async function handleFile(file) {
     state.fileName = (file.name || "moon").replace(/\.[^.]+$/, "") || "moon";
     const bmp = await decodeImage(file);
     busy("画像を縮小中…");
-    // 表示・保存用（長辺 4096px / 16MP まで）
-    const work = resizeTo(bmp, WORK_MAX, WORK_MAX_PIXELS);
-    if (bmp.close) bmp.close();
-    else if (bmp !== work && bmp.getContext) { bmp.width = 1; bmp.height = 1; } // メモリを早めに解放
+    // 表示・保存用：上限以下なら元の解像度のまま使う（超える場合だけ縮小）
+    const d0 = dims(bmp);
+    state.origW = d0.w; state.origH = d0.h;
+    const tooBig = d0.w > DISPLAY_MAX_SIDE || d0.h > DISPLAY_MAX_SIDE || d0.w * d0.h > DISPLAY_MAX_PIXELS;
+    const work = tooBig ? resizeTo(bmp, DISPLAY_MAX_SIDE, DISPLAY_MAX_PIXELS) : bmp;
+    if (work !== bmp) {
+      if (bmp.close) bmp.close();
+      else if (bmp.getContext) { bmp.width = 1; bmp.height = 1; } // メモリを早めに解放
+    }
     // 解析用（長辺 2048px）
     const solveCanvas = resizeTo(work, SOLVE_MAX, Infinity);
     const b64 = await canvasToBase64(solveCanvas, "image/jpeg", 0.92);
     const solveW = solveCanvas.width;
-    if (solveCanvas !== work) { solveCanvas.width = 1; solveCanvas.height = 1; }
+    solveCanvas.width = 1; solveCanvas.height = 1;
 
     await featuresReady;
     busy("月面を解析中…（SkySolver）");
     const res = await solveMoon(b64);
     state.solve = res;
-    state.img = work; state.W = work.width; state.H = work.height;
+    if (state.img && state.img !== work && state.img.close) state.img.close();
+    const dw = dims(work);
+    state.img = work; state.W = dw.w; state.H = dw.h;
 
     if (!res.view) {
       busy(null);
@@ -226,7 +241,7 @@ async function handleFile(file) {
       return;
     }
     // 解析画像の座標 → 表示用画像の座標（画素中心が原点の座標系）
-    const k = work.width / solveW;
+    const k = state.W / solveW;
     const v = res.view;
     state.view = Object.assign({}, v, { cx: (v.cx + 0.5) * k - 0.5, cy: (v.cy + 0.5) * k - 0.5, R: v.R * k });
     state.proj = makeProjection(state.view);
@@ -401,6 +416,12 @@ async function decodeTiff(buf) {
     const f = 255 / max;
     for (let i = 0; i < rgba.length; i += 4) { rgba[i] = Math.min(255, rgba[i] * f); rgba[i + 1] = Math.min(255, rgba[i + 1] * f); rgba[i + 2] = Math.min(255, rgba[i + 2] * f); }
   }
+  // キャンバス上限を超える大きな TIFF は ImageBitmap にして元の画素を保つ
+  if (w * h > CANVAS_MAX_PIXELS && window.createImageBitmap && window.ImageData) {
+    try {
+      return await createImageBitmap(new ImageData(new Uint8ClampedArray(rgba.buffer, rgba.byteOffset, w * h * 4), w, h));
+    } catch (e) { /* 下の方法へ */ }
+  }
   const c = document.createElement("canvas");
   c.width = w; c.height = h;
   const g = c.getContext("2d");
@@ -427,9 +448,13 @@ async function convertHeic(file) {
   }
 }
 
-// 長辺 maxSide・総画素 maxPixels 以下に縮小した canvas を返す（拡大はしない）
+function dims(src) {
+  return { w: src.naturalWidth || src.width, h: src.naturalHeight || src.height };
+}
+
+// 長辺 maxSide・総画素 maxPixels 以下に縮小した canvas を返す（拡大はしない。常に新しい canvas）
 function resizeTo(src, maxSide, maxPixels) {
-  const w0 = src.width || src.naturalWidth, h0 = src.height || src.naturalHeight;
+  const d = dims(src), w0 = d.w, h0 = d.h;
   let f = Math.min(1, maxSide / Math.max(w0, h0));
   if (w0 * h0 * f * f > maxPixels) f = Math.sqrt(maxPixels / (w0 * h0));
   const w = Math.max(1, Math.round(w0 * f)), h = Math.max(1, Math.round(h0 * f));
@@ -441,6 +466,7 @@ function resizeTo(src, maxSide, maxPixels) {
     const g = c.getContext("2d");
     g.imageSmoothingQuality = "high";
     g.drawImage(cur, 0, 0, c.width, c.height);
+    if (cur !== src) { cur.width = 1; cur.height = 1; }
     cur = c; cw = c.width; ch = c.height;
   }
   const out = document.createElement("canvas");
@@ -448,6 +474,7 @@ function resizeTo(src, maxSide, maxPixels) {
   const g = out.getContext("2d");
   g.imageSmoothingQuality = "high";
   g.drawImage(cur, 0, 0, w, h);
+  if (cur !== src) { cur.width = 1; cur.height = 1; }
   return out;
 }
 
@@ -879,7 +906,10 @@ function updateInfo() {
   rows.push(["秤動", `${fmtLon(v.lon0)} / ${fmtLat(v.lat0)}`]);
   rows.push(["北の向き", `画像の上から反時計回りに ${v.rho.toFixed(1)}°` + (v.par < 0 ? "（鏡像）" : "")]);
   const kmpx = MOON_R_KM / state.view.R;
-  rows.push(["縮尺", `${kmpx.toFixed(2)} km/px（表示画像 ${state.W}×${state.H}px）`]);
+  const sizeNote = state.origW && (state.origW !== state.W)
+    ? `（元画像 ${state.origW}×${state.origH}px を ${state.W}×${state.H}px に縮小して表示）`
+    : `（元画像 ${state.W}×${state.H}px のまま）`;
+  rows.push(["縮尺", `${kmpx.toFixed(2)} km/px ${sizeNote}`]);
   if (r.frame && r.frame.center) rows.push(["画像中心", `${fmtLon(r.frame.center.lon)} / ${fmtLat(r.frame.center.lat)}`]);
   $("info").innerHTML = rows.map(([k, val]) => `<dt>${k}</dt><dd>${escapeHtml(val)}</dd>`).join("");
   const warn = $("warn");
@@ -1099,33 +1129,49 @@ $("save-full").addEventListener("click", async () => {
   if (!state.img) return;
   busy("画像を書き出し中…");
   await ensureFonts();
+  // 元の解像度で書き出す（ブラウザのキャンバス上限を超えるときだけ縮小）
+  const k = Math.min(1, Math.sqrt(CANVAS_MAX_PIXELS / (state.W * state.H)), CANVAS_MAX_SIDE / Math.max(state.W, state.H));
   const c = document.createElement("canvas");
-  c.width = state.W; c.height = state.H;
+  c.width = Math.round(state.W * k); c.height = Math.round(state.H * k);
   const g = c.getContext("2d");
-  g.drawImage(state.img, 0, 0);
+  g.imageSmoothingQuality = "high";
+  g.drawImage(state.img, 0, 0, c.width, c.height);
   // 画面と同じ詳細度：画像全体を「現在の拡大率で表示した幅」でレイアウトする
   // 拡大しすぎると文字が小さくなりすぎるので、画像幅の 1.2 倍までに抑える
   const layoutW = Math.max(900, Math.min(state.W * state.scale, state.W * 1.2));
-  const ui = state.W / layoutW;
-  renderOverlay(g, { s: 1, tx: 0, ty: 0, ui, w: c.width, h: c.height }, null);
-  drawCredit(g, c.width, c.height, Math.max(ui, state.W / 1800));
+  const ui = c.width / layoutW;
+  renderOverlay(g, { s: k, tx: 0, ty: 0, ui, w: c.width, h: c.height }, null);
+  drawCredit(g, c.width, c.height, Math.max(ui, c.width / 1800));
   busy(null);
   saveCanvas(c, "annotated");
 });
 
 $("save-view").addEventListener("click", async () => {
   if (!state.img) return;
+  busy("画像を書き出し中…");
   await ensureFonts();
-  const hover = state.hover;
-  state.hover = null;
-  drawScreen();
+  // 画面に見えている写真の範囲（画像 px）
+  const r = canvas.getBoundingClientRect();
+  const x0 = Math.max(0, -state.tx / state.scale), y0 = Math.max(0, -state.ty / state.scale);
+  const x1 = Math.min(state.W, (r.width - state.tx) / state.scale), y1 = Math.min(state.H, (r.height - state.ty) / state.scale);
+  if (x1 <= x0 || y1 <= y0) { busy(null); return; }
+  // 写真の画素を落とさない倍率（画面の方が細かければ画面の倍率）で書き出す
+  const dpr = window.devicePixelRatio || 1;
+  let k = Math.max(1, state.scale * dpr);
+  const area = (x1 - x0) * (y1 - y0);
+  k = Math.min(k, Math.sqrt(CANVAS_MAX_PIXELS / area), CANVAS_MAX_SIDE / Math.max(x1 - x0, y1 - y0));
   const c = document.createElement("canvas");
-  c.width = canvas.width; c.height = canvas.height;
+  c.width = Math.max(1, Math.round((x1 - x0) * k)); c.height = Math.max(1, Math.round((y1 - y0) * k));
   const g = c.getContext("2d");
-  g.drawImage(canvas, 0, 0);
-  drawCredit(g, c.width, c.height, window.devicePixelRatio || 1);
-  state.hover = hover;
-  requestDraw();
+  g.imageSmoothingQuality = "high";
+  g.setTransform(k, 0, 0, k, -x0 * k, -y0 * k);
+  g.drawImage(state.img, 0, 0);
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  // 文字・線の大きさは画面での見た目と同じ比率にする
+  const ui = k / state.scale;
+  renderOverlay(g, { s: k, tx: -x0 * k, ty: -y0 * k, ui, w: c.width, h: c.height }, null);
+  drawCredit(g, c.width, c.height, Math.max(ui, c.width / 1800));
+  busy(null);
   saveCanvas(c, "view");
 });
 

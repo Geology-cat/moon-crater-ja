@@ -28,7 +28,7 @@
       <p class="drop-sub">全体像・三日月・望遠鏡での拡大写真のいずれも可（JPEG / PNG / WebP / TIFF / HEIC など）</p>
       <label class="btn primary" for="file-input">ファイルを選択</label>
       <ul class="notes">
-        <li>大きな画像は読み込み時に自動で縮小してから解析します。</li>
+        <li>表示・保存は元の解像度のまま行い、解析用にだけ縮小した画像を作ります（極端に大きな画像は表示用にも縮小します）。</li>
         <li>解析のため、縮小した画像（長辺2048px）を <a href="https://skysolver.app/moon" target="_blank" rel="noopener">SkySolver</a> に送信します（同サービスは画像を保存しないと説明しています）。</li>
         <li>拡大するほど小さなクレーターまで名前が表示されます。</li>
       </ul>
@@ -90,7 +90,7 @@
     </label>
     <button id="save-full" class="btn primary block">画像全体を保存</button>
     <button id="save-view" class="btn block">表示中の範囲を保存</button>
-    <p class="hint">画像全体の保存では、現在の拡大率に応じた詳細度で注釈を描き込みます（最大長辺4096px）。</p>
+    <p class="hint">どちらも元画像の解像度のまま保存します（「表示中の範囲」は拡大中なら写真の画素を落とさずに切り出します）。注釈の詳細度は現在の拡大率に合わせます。Safari では約1600万画素を超える場合のみ縮小されます。</p>
   </section>
   <section class="credits">
     <p>月面の位置合わせ：<a href="https://skysolver.app/moon" target="_blank" rel="noopener">SkySolver.app</a> Moon API<br>
