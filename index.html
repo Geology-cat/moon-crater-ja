@@ -25,7 +25,7 @@
     <div class="drop-inner">
       <div class="moon-icon" aria-hidden="true"></div>
       <p class="drop-title">月の写真をここにドラッグ＆ドロップ</p>
-      <p class="drop-sub">全体像・三日月・望遠鏡での拡大写真のいずれも可（JPEG / PNG / WebP など。TIFF は Safari のみ）</p>
+      <p class="drop-sub">全体像・三日月・望遠鏡での拡大写真のいずれも可（JPEG / PNG / WebP / TIFF / HEIC など）</p>
       <label class="btn primary" for="file-input">ファイルを選択</label>
       <ul class="notes">
         <li>大きな画像は読み込み時に自動で縮小してから解析します。</li>
@@ -70,6 +70,7 @@
       <output id="detail-out">標準</output>
     </label>
     <label class="check"><input type="checkbox" id="lay-labels" checked> 地名</label>
+    <label class="check"><input type="checkbox" id="lay-mare" checked> 海の輪郭</label>
     <label class="check"><input type="checkbox" id="lay-outlines" checked> クレーターの輪郭</label>
     <label class="check"><input type="checkbox" id="lay-sat" checked> 副クレーター（コペルニクスA など）</label>
     <label class="check"><input type="checkbox" id="lay-night"> 影になっている側の地名も表示</label>
@@ -94,6 +95,7 @@
   <section class="credits">
     <p>月面の位置合わせ：<a href="https://skysolver.app/moon" target="_blank" rel="noopener">SkySolver.app</a> Moon API<br>
     地名：<a href="https://planetarynames.wr.usgs.gov/" target="_blank" rel="noopener">IAU / USGS Gazetteer of Planetary Nomenclature</a><br>
+    海の輪郭：<a href="https://data.lroc.im-ldi.com/lroc/view_rdr/SHAPEFILE_LROC_GLOBAL_MARE" target="_blank" rel="noopener">LROC Global Mare Boundaries</a>（Nelson et al. 2014）<br>
     日本語名：Wikidata・日本語版Wikipedia ほか</p>
   </section>
 </aside>

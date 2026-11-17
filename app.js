@@ -70,7 +70,7 @@ const state = {
   drawn: [],          // 直近の描画で表示した地名（ヒットテスト用）
   fileName: "moon",
   sunVec: null,       // 太陽方向（明暗境界がわかったときのみ）
-  opts: { detail: 0, labels: true, outlines: true, sat: true, grid: false, limb: true, night: false, fontScale: 1 },
+  opts: { detail: 0, labels: true, outlines: true, sat: true, grid: false, limb: true, night: false, mare: true, fontScale: 1 },
 };
 
 const $ = (id) => document.getElementById(id);
@@ -101,6 +101,36 @@ const featuresReady = fetch("data/features.json")
       };
     });
   });
+
+// ---------- 海の輪郭（LROC）の読み込み ----------
+// rings: { name: 海の番号, v: 単位ベクトル列, c: 中心方向, r: 角半径 }
+state.mare = null;
+const mareReady = fetch("data/mare.json")
+  .then((r) => r.json())
+  .then((json) => {
+    state.mare = {
+      names: json.names,
+      levels: json.levels.map((lv) => ({ tol: lv.tol, rings: lv.rings.map(decodeRing) })),
+    };
+    requestDraw();
+  })
+  .catch((e) => console.warn("海の輪郭を読み込めませんでした", e));
+
+function decodeRing(a) {
+  const n = (a.length - 1) / 2;
+  const v = new Float64Array(n * 3);
+  let x = 0, y = 0, sx = 0, sy = 0, sz = 0;
+  for (let i = 0; i < n; i++) {
+    if (i === 0) { x = a[1]; y = a[2]; } else { x += a[1 + 2 * i]; y += a[2 + 2 * i]; }
+    const p = vec(x / 100, y / 100);
+    v[3 * i] = p[0]; v[3 * i + 1] = p[1]; v[3 * i + 2] = p[2];
+    sx += p[0]; sy += p[1]; sz += p[2];
+  }
+  const c = norm([sx, sy, sz]);
+  let minDot = 1;
+  for (let i = 0; i < n; i++) minDot = Math.min(minDot, c[0] * v[3 * i] + c[1] * v[3 * i + 1] + c[2] * v[3 * i + 2]);
+  return { name: a[0], v, n, c, r: Math.acos(Math.max(-1, Math.min(1, minDot))) };
+}
 
 function vec(lon, lat) {
   const cl = Math.cos(lat * DEG);
@@ -143,20 +173,23 @@ function unproject(P, x, y) {
 const fileInput = $("file-input");
 fileInput.addEventListener("change", () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); fileInput.value = ""; });
 
+const IMAGE_EXT = /\.(jpe?g|png|gif|bmp|webp|avif|tiff?|heic|heif|hif)$/i;
+function toArray(list) { return list ? Array.prototype.slice.call(list) : []; }
 let dragDepth = 0;
 window.addEventListener("dragenter", (e) => { if (hasFiles(e)) { e.preventDefault(); dragDepth++; $("drop-overlay").hidden = false; } });
 window.addEventListener("dragover", (e) => { if (hasFiles(e)) e.preventDefault(); });
 window.addEventListener("dragleave", () => { dragDepth = Math.max(0, dragDepth - 1); if (!dragDepth) $("drop-overlay").hidden = true; });
 window.addEventListener("drop", (e) => {
   e.preventDefault(); dragDepth = 0; $("drop-overlay").hidden = true;
-  const f = [...(e.dataTransfer?.files || [])].find((x) => x.type.startsWith("image/") || /\.(tiff?|webp|avif|heic)$/i.test(x.name));
-  if (f) handleFile(f); else if (e.dataTransfer?.files?.length) alert("画像ファイルをドロップしてください。");
+  const files = toArray(e.dataTransfer && e.dataTransfer.files);
+  const f = files.find((x) => (x.type && x.type.indexOf("image/") === 0) || IMAGE_EXT.test(x.name));
+  if (f) handleFile(f); else if (files.length) alert("画像ファイルをドロップしてください。");
 });
 window.addEventListener("paste", (e) => {
-  const item = [...(e.clipboardData?.items || [])].find((i) => i.type.startsWith("image/"));
+  const item = toArray(e.clipboardData && e.clipboardData.items).find((i) => i.type.indexOf("image/") === 0);
   if (item) handleFile(item.getAsFile());
 });
-function hasFiles(e) { return [...(e.dataTransfer?.types || [])].includes("Files"); }
+function hasFiles(e) { return toArray(e.dataTransfer && e.dataTransfer.types).indexOf("Files") >= 0; }
 
 function busy(text) {
   $("busy").hidden = !text;
@@ -171,10 +204,13 @@ async function handleFile(file) {
     busy("画像を縮小中…");
     // 表示・保存用（長辺 4096px / 16MP まで）
     const work = resizeTo(bmp, WORK_MAX, WORK_MAX_PIXELS);
+    if (bmp.close) bmp.close();
+    else if (bmp !== work && bmp.getContext) { bmp.width = 1; bmp.height = 1; } // メモリを早めに解放
     // 解析用（長辺 2048px）
     const solveCanvas = resizeTo(work, SOLVE_MAX, Infinity);
     const b64 = await canvasToBase64(solveCanvas, "image/jpeg", 0.92);
-    if (bmp.close) bmp.close();
+    const solveW = solveCanvas.width;
+    if (solveCanvas !== work) { solveCanvas.width = 1; solveCanvas.height = 1; }
 
     await featuresReady;
     busy("月面を解析中…（SkySolver）");
@@ -190,9 +226,9 @@ async function handleFile(file) {
       return;
     }
     // 解析画像の座標 → 表示用画像の座標（画素中心が原点の座標系）
-    const k = work.width / solveCanvas.width;
+    const k = work.width / solveW;
     const v = res.view;
-    state.view = { ...v, cx: (v.cx + 0.5) * k - 0.5, cy: (v.cy + 0.5) * k - 0.5, R: v.R * k };
+    state.view = Object.assign({}, v, { cx: (v.cx + 0.5) * k - 0.5, cy: (v.cy + 0.5) * k - 0.5, R: v.R * k });
     state.proj = makeProjection(state.view);
     const sun = res.sun;
     state.sunVec = sun && sun.terminator !== false ? vec(sun.lon, sun.lat || 0) : null;
@@ -203,26 +239,191 @@ async function handleFile(file) {
   } catch (err) {
     console.error(err);
     busy(null);
-    alert("エラーが発生しました：\n" + (err.message || err));
+    alert("エラーが発生しました：\n" + ((err && err.message) || err));
   }
 }
 
+// ---------- 画像のデコード（TIFF・HEIC は変換してから読み込む） ----------
+function readHead(file, n) {
+  return new Promise((resolve) => {
+    const fr = new FileReader();
+    fr.onload = () => resolve(new Uint8Array(fr.result));
+    fr.onerror = () => resolve(new Uint8Array(0));
+    fr.readAsArrayBuffer(file.slice(0, n));
+  });
+}
+function readAll(file) {
+  return new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => resolve(fr.result);
+    fr.onerror = () => reject(new Error("ファイルを読み込めませんでした。"));
+    fr.readAsArrayBuffer(file);
+  });
+}
+// 先頭のバイト列から形式を判定する
+function sniffFormat(h, name) {
+  const s = (a, b) => String.fromCharCode.apply(null, h.subarray(a, b));
+  if (h.length >= 4 && ((h[0] === 0x49 && h[1] === 0x49 && h[2] === 42 && h[3] === 0) || (h[0] === 0x4d && h[1] === 0x4d && h[2] === 0 && h[3] === 42))) return "tiff";
+  if (h.length >= 12 && s(4, 8) === "ftyp") {
+    const brands = s(8, Math.min(h.length, 40));
+    if (/avif|avis/.test(brands)) return "avif";
+    if (/hei[cfmsx]|hev[cmsx]|mif1|msf1/.test(brands)) return "heic";
+  }
+  if (h[0] === 0xff && h[1] === 0xd8) return "jpeg";
+  if (/\.(heic|heif|hif)$/i.test(name)) return "heic";
+  if (/\.tiff?$/i.test(name)) return "tiff";
+  return "other";
+}
+
+// 外部スクリプトを必要になったときだけ読み込む
+const scriptCache = {};
+function loadScript(src) {
+  if (!scriptCache[src]) {
+    scriptCache[src] = new Promise((resolve, reject) => {
+      const el = document.createElement("script");
+      el.src = src;
+      el.onload = resolve;
+      el.onerror = () => { delete scriptCache[src]; reject(new Error("変換ライブラリを読み込めませんでした: " + src)); };
+      document.head.appendChild(el);
+    });
+  }
+  return scriptCache[src];
+}
+
+// 古いブラウザ向け: Blob.arrayBuffer（Safari 14 未満にはない）を補う
+if (window.Blob && !Blob.prototype.arrayBuffer) {
+  Blob.prototype.arrayBuffer = function () { return readAll(this); };
+}
+
+// ブラウザがEXIFの向きを自動で反映するか（Safari 13.1 / Chrome 81 以降は反映する）
+const AUTO_ORIENT = !!(window.CSS && CSS.supports && CSS.supports("image-orientation", "from-image"));
+
 async function decodeImage(file) {
+  const head = await readHead(file, 128 * 1024);
+  const fmt = sniffFormat(head, file.name || "");
+  // まずブラウザ自身のデコーダを試す（Safari は TIFF・HEIC も読める）
+  if (fmt !== "tiff" || /Safari/.test(navigator.userAgent) && !/Chrome|Chromium|Edg/.test(navigator.userAgent)) {
+    const im = await decodeNative(file, fmt === "jpeg" && !AUTO_ORIENT ? exifOrientation(head) : 1);
+    if (im) return im;
+  }
+  if (fmt === "tiff") {
+    busy("TIFF を変換中…");
+    return decodeTiff(await readAll(file));
+  }
+  if (fmt === "heic") {
+    busy("HEIC を JPEG に変換中…（初回は変換ライブラリを読み込むため時間がかかります）");
+    const jpg = await convertHeic(file);
+    const im = await decodeNative(jpg, 1);
+    if (im) return im;
+  }
+  if (fmt === "avif") throw new Error("このブラウザは AVIF 形式を読み込めません。JPEG か PNG に変換してからお試しください。");
+  throw new Error("この形式の画像はブラウザで読み込めませんでした。JPEG か PNG に変換してからお試しください。");
+}
+
+// ブラウザ標準のデコード。失敗したら null。
+async function decodeNative(blob, orientation) {
+  if (window.createImageBitmap && AUTO_ORIENT) {
+    try { return await createImageBitmap(blob, { imageOrientation: "from-image" }); } catch (e) { /* 次の方法へ */ }
+  }
+  const url = URL.createObjectURL(blob);
   try {
-    return await createImageBitmap(file, { imageOrientation: "from-image" });
+    const im = new Image();
+    await new Promise((resolve, reject) => { im.onload = resolve; im.onerror = reject; im.src = url; });
+    if (!im.naturalWidth) return null;
+    return orientation > 1 ? applyOrientation(im, orientation) : im;
   } catch (e) {
-    // 一部ブラウザ向けのフォールバック
-    const url = URL.createObjectURL(file);
-    try {
-      const im = new Image();
-      im.src = url;
-      await im.decode();
-      return im;
-    } catch (e2) {
-      throw new Error("この形式の画像はブラウザで読み込めませんでした（HEIC や一部の TIFF は JPEG/PNG に変換してください）。");
-    } finally {
-      setTimeout(() => URL.revokeObjectURL(url), 10000);
+    return null;
+  } finally {
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  }
+}
+
+// JPEG の EXIF から向き（1〜8）を読む（古いブラウザ向け）
+function exifOrientation(h) {
+  try {
+    const dv = new DataView(h.buffer, h.byteOffset, h.byteLength);
+    if (dv.getUint16(0) !== 0xffd8) return 1;
+    let p = 2;
+    while (p + 4 < dv.byteLength) {
+      const marker = dv.getUint16(p);
+      const len = dv.getUint16(p + 2);
+      if (marker === 0xffe1 && dv.getUint32(p + 4) === 0x45786966) {
+        const t = p + 10;
+        const le = dv.getUint16(t) === 0x4949;
+        const ifd = t + dv.getUint32(t + 4, le);
+        const n = dv.getUint16(ifd, le);
+        for (let i = 0; i < n; i++) {
+          const e = ifd + 2 + i * 12;
+          if (dv.getUint16(e, le) === 0x0112) return dv.getUint16(e + 8, le);
+        }
+        return 1;
+      }
+      if ((marker & 0xff00) !== 0xff00) break;
+      p += 2 + len;
     }
+  } catch (e) { /* 読めなければ回転なし */ }
+  return 1;
+}
+function applyOrientation(im, o) {
+  const w = im.naturalWidth, h = im.naturalHeight;
+  const c = document.createElement("canvas");
+  const swap = o >= 5;
+  c.width = swap ? h : w; c.height = swap ? w : h;
+  const g = c.getContext("2d");
+  const T = { 2: [-1, 0, 0, 1, w, 0], 3: [-1, 0, 0, -1, w, h], 4: [1, 0, 0, -1, 0, h], 5: [0, 1, 1, 0, 0, 0],
+    6: [0, 1, -1, 0, h, 0], 7: [0, -1, -1, 0, h, w], 8: [0, -1, 1, 0, 0, w] }[o];
+  if (T) g.setTransform(T[0], T[1], T[2], T[3], T[4], T[5]);
+  g.drawImage(im, 0, 0);
+  return c;
+}
+
+// TIFF（8/16 ビット、無圧縮・LZW・Deflate・PackBits など）を canvas に変換
+async function decodeTiff(buf) {
+  await loadScript("lib/pako_inflate.min.js");
+  await loadScript("lib/UTIF.js");
+  const UTIF = window.UTIF;
+  const ifds = UTIF.decode(buf);
+  // サムネイルを避け、いちばん大きな画像を選ぶ
+  let best = null;
+  for (const ifd of ifds) {
+    const w = ifd.t256 ? ifd.t256[0] : 0, h = ifd.t257 ? ifd.t257[0] : 0;
+    if (!best || w * h > best.w * best.h) best = { ifd, w, h };
+  }
+  if (!best || !best.w) throw new Error("TIFF の画像データが見つかりませんでした。");
+  UTIF.decodeImage(buf, best.ifd, ifds);
+  const rgba = UTIF.toRGBA8(best.ifd);
+  const w = best.ifd.width, h = best.ifd.height;
+  // 天体写真の 16 ビット TIFF などで暗すぎる場合は明るさを引き伸ばす
+  let max = 0;
+  const step = Math.max(4, ((rgba.length / 4 / 200000) | 0) * 4);
+  for (let i = 0; i < rgba.length; i += step) { if (rgba[i] > max) max = rgba[i]; if (rgba[i + 1] > max) max = rgba[i + 1]; if (rgba[i + 2] > max) max = rgba[i + 2]; }
+  if (max > 0 && max < 160) {
+    const f = 255 / max;
+    for (let i = 0; i < rgba.length; i += 4) { rgba[i] = Math.min(255, rgba[i] * f); rgba[i + 1] = Math.min(255, rgba[i + 1] * f); rgba[i + 2] = Math.min(255, rgba[i + 2] * f); }
+  }
+  const c = document.createElement("canvas");
+  c.width = w; c.height = h;
+  const g = c.getContext("2d");
+  const id = g.createImageData(w, h);
+  id.data.set(rgba);
+  g.putImageData(id, 0, 0);
+  return c;
+}
+
+// HEIC/HEIF → JPEG（新しい libheif の heic-to を優先し、だめなら heic2any）
+async function convertHeic(file) {
+  let firstErr = null;
+  try {
+    await loadScript("lib/heic-to.iife.js");
+    if (window.HeicTo) return await window.HeicTo({ blob: file, type: "image/jpeg", quality: 0.95 });
+  } catch (e) { firstErr = e; console.warn("heic-to failed", e); }
+  try {
+    await loadScript("lib/heic2any.min.js");
+    const out = await window.heic2any({ blob: file, toType: "image/jpeg", quality: 0.95 });
+    return Array.isArray(out) ? out[0] : out;
+  } catch (e) {
+    console.warn("heic2any failed", e);
+    throw new Error("HEIC 画像を変換できませんでした。写真アプリなどで JPEG に書き出してからお試しください。" + (firstErr ? "" : ""));
   }
 }
 
@@ -272,7 +473,9 @@ async function solveMoon(b64) {
         body: JSON.stringify({ image: b64 }),
       });
     } catch (e) {
-      throw new Error("SkySolver に接続できませんでした。ネットワークを確認してください。");
+      throw new Error("SkySolver に接続できませんでした。ネットワークを確認してください。\n" +
+        "古い OS（iOS 12 / macOS 10.14 など）では、SkySolver の証明書（Let's Encrypt の ISRG Root X2 系）を信頼できず接続に失敗することがあります。" +
+        "その場合は OS を更新するか、端末に ISRG Root X2 証明書を追加してください。");
     }
     if (r.status === 429) {
       const wait = Math.min(60, Number(r.headers.get("Retry-After")) || 5) + Math.random();
@@ -286,7 +489,7 @@ async function solveMoon(b64) {
     let body = null;
     try { body = await r.json(); } catch (e) { /* noop */ }
     if (!r.ok) {
-      const msg = body?.message || `HTTP ${r.status}`;
+      const msg = (body && body.message) || `HTTP ${r.status}`;
       throw new Error("SkySolver からエラーが返りました：" + msg);
     }
     return body;
@@ -311,7 +514,9 @@ function resizeCanvas() {
   canvas.height = Math.max(1, Math.round(r.height * dpr));
   requestDraw();
 }
-new ResizeObserver(() => { if (!canvas.hidden) resizeCanvas(); }).observe($("stage"));
+if (window.ResizeObserver) new ResizeObserver(() => { if (!canvas.hidden) resizeCanvas(); }).observe($("stage"));
+else window.addEventListener("resize", () => { if (!canvas.hidden) resizeCanvas(); });
+window.addEventListener("orientationchange", () => setTimeout(() => { if (!canvas.hidden) resizeCanvas(); }, 300));
 
 function fitView() {
   const r = canvas.getBoundingClientRect();
@@ -381,6 +586,8 @@ function renderOverlay(g, vt, hover) {
   if (o.grid) drawGrid(g, vt, P, L);
   // 縁・明暗境界線
   if (o.limb) drawLimbTerminator(g, vt, P);
+  // 海の輪郭
+  if (o.mare && state.mare) drawMare(g, vt, P, L, hover);
 
   // 表示候補を選ぶ
   const cands = [];
@@ -528,6 +735,67 @@ function strokeSphereCurve(g, vt, P, pts) {
   }
 }
 
+// 海の輪郭を描く。拡大率に応じて粗い版と細かい版を切り替える。
+function drawMare(g, vt, P, L, hover) {
+  const levels = state.mare.levels;
+  const degPx = P.R * DEG * L;  // 1° がレイアウト px で何 px か
+  // 誤差が画面上で約 1.2px 以内に収まる、いちばん粗い版を選ぶ（levels は粗い順）
+  let lv = levels[levels.length - 1];
+  for (const cand of levels) { if (cand.tol * degPx <= 1.2) { lv = cand; break; } }
+
+  const ex = P.ex, ey = P.ey, ez = P.ez;
+  const kx = P.R * vt.s, cxC = P.cx * vt.s + vt.tx, cyC = P.cy * vt.s + vt.ty;
+  const pc = P.par * P.c, ps = P.par * P.s;
+  const vcx = vt.w / 2, vcy = vt.h / 2, viewR = Math.hypot(vt.w, vt.h) / 2;
+  const hoverName = hover && hover.group === "mare" ? hover.name : null;
+  // 影の側を隠す設定のときは、夜側の部分の輪郭も描かない
+  const sun = !state.opts.night && state.sunVec;
+  const hiRings = [];
+
+  const tracePath = (ring) => {
+    const v = ring.v;
+    let pen = false, allVis = true;
+    for (let i = 0; i < ring.n; i++) {
+      const x = v[3 * i], y = v[3 * i + 1], z = v[3 * i + 2];
+      const mu = x * ez[0] + y * ez[1] + z * ez[2];
+      if (mu <= 0 || (sun && x * sun[0] + y * sun[1] + z * sun[2] < -0.005)) { pen = false; allVis = false; continue; }
+      const X = x * ex[0] + y * ex[1] + z * ex[2];
+      const Y = x * ey[0] + y * ey[1] + z * ey[2];
+      const sx = cxC + kx * (X * pc - Y * P.s);
+      const sy = cyC - kx * (X * ps + Y * P.c);
+      if (pen) g.lineTo(sx, sy); else { g.moveTo(sx, sy); pen = true; }
+    }
+    if (allVis) g.closePath();
+  };
+
+  g.beginPath();
+  for (const ring of lv.rings) {
+    const c = ring.c;
+    // 完全に裏側にあるもの・画面から遠いものは省く
+    if (c[0] * ez[0] + c[1] * ez[1] + c[2] * ez[2] < -Math.sin(ring.r)) continue;
+    const pr = project(P, c);
+    const X = pr[0] * vt.s + vt.tx, Y = pr[1] * vt.s + vt.ty;
+    if (Math.hypot(X - vcx, Y - vcy) > viewR + ring.r * kx + 4) continue;
+    if (hoverName && state.mare.names[ring.name][1] === hoverName) hiRings.push(ring);
+    tracePath(ring);
+  }
+  g.strokeStyle = "#8fd0ff";
+  g.globalAlpha = 0.6;
+  g.lineWidth = 1.1 * vt.ui;
+  g.stroke();
+  if (hiRings.length) {
+    g.beginPath();
+    hiRings.forEach(tracePath);
+    g.fillStyle = "rgba(143,208,255,0.12)";
+    g.globalAlpha = 1;
+    g.fill("evenodd");
+    g.strokeStyle = "#ffffff";
+    g.lineWidth = 2 * vt.ui;
+    g.stroke();
+  }
+  g.globalAlpha = 1;
+}
+
 function drawGrid(g, vt, P, L) {
   // 画面上の間隔が 70 レイアウト px 以上になる刻みを選ぶ
   const degPx = (P.R * DEG) * L;
@@ -567,7 +835,7 @@ function drawLimbTerminator(g, vt, P) {
   g.arc(P.cx * vt.s + vt.tx, P.cy * vt.s + vt.ty, P.R * vt.s, 0, Math.PI * 2);
   g.stroke();
   // 明暗境界線（太陽方向に垂直な大円）
-  const sun = state.solve?.sun;
+  const sun = state.solve && state.solve.sun;
   if (sun && sun.terminator !== false) {
     const sv = vec(sun.lon, sun.lat || 0);
     let u = cross(sv, [0, 0, 1]);
@@ -612,7 +880,7 @@ function updateInfo() {
   rows.push(["北の向き", `画像の上から反時計回りに ${v.rho.toFixed(1)}°` + (v.par < 0 ? "（鏡像）" : "")]);
   const kmpx = MOON_R_KM / state.view.R;
   rows.push(["縮尺", `${kmpx.toFixed(2)} km/px（表示画像 ${state.W}×${state.H}px）`]);
-  if (r.frame?.center) rows.push(["画像中心", `${fmtLon(r.frame.center.lon)} / ${fmtLat(r.frame.center.lat)}`]);
+  if (r.frame && r.frame.center) rows.push(["画像中心", `${fmtLon(r.frame.center.lon)} / ${fmtLat(r.frame.center.lat)}`]);
   $("info").innerHTML = rows.map(([k, val]) => `<dt>${k}</dt><dd>${escapeHtml(val)}</dd>`).join("");
   const warn = $("warn");
   if (r.verdict !== "verified") {
@@ -625,26 +893,31 @@ function updateInfo() {
 function escapeHtml(s) { return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
 // ---------- 操作（パン・ズーム・ホバー） ----------
+// Pointer Events がない古い Safari（12 など）ではマウス・タッチイベントで同じ処理を行う
 const pointers = new Map();
 let panStart = null, pinchStart = null, moved = false;
+function localXY(e) {
+  const r = canvas.getBoundingClientRect();
+  return { x: e.clientX - r.left, y: e.clientY - r.top };
+}
+function pointerValues() { const a = []; pointers.forEach((v) => a.push(v)); return a; }
 
-canvas.addEventListener("pointerdown", (e) => {
-  canvas.setPointerCapture(e.pointerId);
-  pointers.set(e.pointerId, { x: e.offsetX, y: e.offsetY });
+function inputDown(id, x, y) {
+  pointers.set(id, { x, y });
   moved = false;
   if (pointers.size === 1) {
-    panStart = { x: e.offsetX, y: e.offsetY, tx: state.tx, ty: state.ty };
+    panStart = { x, y, tx: state.tx, ty: state.ty };
     canvas.classList.add("dragging");
   } else if (pointers.size === 2) {
-    const [a, b] = [...pointers.values()];
-    pinchStart = { d: Math.hypot(a.x - b.x, a.y - b.y), scale: state.scale, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2, tx: state.tx, ty: state.ty };
+    const ab = pointerValues(), a = ab[0], b = ab[1];
+    pinchStart = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, scale: state.scale, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2, tx: state.tx, ty: state.ty };
     panStart = null;
   }
-});
-canvas.addEventListener("pointermove", (e) => {
-  if (pointers.has(e.pointerId)) pointers.set(e.pointerId, { x: e.offsetX, y: e.offsetY });
+}
+function inputMove(id, x, y) {
+  if (pointers.has(id)) pointers.set(id, { x, y });
   if (pinchStart && pointers.size === 2) {
-    const [a, b] = [...pointers.values()];
+    const ab = pointerValues(), a = ab[0], b = ab[1];
     const d = Math.hypot(a.x - b.x, a.y - b.y);
     const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
     const ns = Math.max(minScale(), Math.min(pinchStart.scale * d / pinchStart.d, 40));
@@ -653,41 +926,85 @@ canvas.addEventListener("pointermove", (e) => {
     state.tx = mx - (pinchStart.mx - pinchStart.tx) * f;
     state.ty = my - (pinchStart.my - pinchStart.ty) * f;
     moved = true;
-    requestDraw();
-    return;
-  }
-  if (panStart) {
-    const dx = e.offsetX - panStart.x, dy = e.offsetY - panStart.y;
-    if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
-    state.tx = panStart.tx + dx; state.ty = panStart.ty + dy;
     hideTooltip();
     requestDraw();
     return;
   }
-  hoverAt(e.offsetX, e.offsetY);
-});
-function endPointer(e) {
-  pointers.delete(e.pointerId);
+  if (panStart) {
+    const dx = x - panStart.x, dy = y - panStart.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+    state.tx = panStart.tx + dx; state.ty = panStart.ty + dy;
+    if (moved) hideTooltip();
+    requestDraw();
+    return;
+  }
+  hoverAt(x, y);
+}
+function inputUp(id, x, y) {
+  pointers.delete(id);
   if (pointers.size < 2) pinchStart = null;
   if (pointers.size === 0) {
     canvas.classList.remove("dragging");
     // タップ（移動なし）なら地名を表示
-    if (panStart && !moved) hoverAt(e.offsetX, e.offsetY);
+    if (panStart && !moved) hoverAt(x, y);
     panStart = null;
   } else if (pointers.size === 1) {
-    const [p] = [...pointers.values()];
+    const p = pointerValues()[0];
     panStart = { x: p.x, y: p.y, tx: state.tx, ty: state.ty };
   }
 }
-canvas.addEventListener("pointerup", endPointer);
-canvas.addEventListener("pointercancel", endPointer);
-canvas.addEventListener("pointerleave", () => { if (!pointers.size) { setHover(null); hideTooltip(); $("coord").textContent = ""; } });
+function inputLeave() { if (!pointers.size) { setHover(null); hideTooltip(); $("coord").textContent = ""; } }
+
+if (window.PointerEvent) {
+  canvas.addEventListener("pointerdown", (e) => {
+    if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
+    const p = localXY(e); inputDown(e.pointerId, p.x, p.y);
+  });
+  canvas.addEventListener("pointermove", (e) => { const p = localXY(e); inputMove(e.pointerId, p.x, p.y); });
+  const up = (e) => { const p = localXY(e); inputUp(e.pointerId, p.x, p.y); };
+  canvas.addEventListener("pointerup", up);
+  canvas.addEventListener("pointercancel", up);
+  canvas.addEventListener("pointerleave", inputLeave);
+} else {
+  // マウス
+  canvas.addEventListener("mousedown", (e) => {
+    const p = localXY(e); inputDown("mouse", p.x, p.y);
+    const mm = (ev) => { const q = localXY(ev); inputMove("mouse", q.x, q.y); };
+    const mu = (ev) => {
+      window.removeEventListener("mousemove", mm); window.removeEventListener("mouseup", mu);
+      const q = localXY(ev); inputUp("mouse", q.x, q.y);
+    };
+    window.addEventListener("mousemove", mm); window.addEventListener("mouseup", mu);
+  });
+  canvas.addEventListener("mousemove", (e) => { if (!pointers.size) { const p = localXY(e); inputMove("hover", p.x, p.y); } });
+  canvas.addEventListener("mouseleave", inputLeave);
+  // タッチ（指ごとに identifier で区別）
+  const touchHandler = (fn) => (e) => {
+    e.preventDefault();
+    toArray(e.changedTouches).forEach((t) => { const p = localXY(t); fn("t" + t.identifier, p.x, p.y); });
+  };
+  canvas.addEventListener("touchstart", touchHandler(inputDown), { passive: false });
+  canvas.addEventListener("touchmove", touchHandler(inputMove), { passive: false });
+  canvas.addEventListener("touchend", touchHandler(inputUp), { passive: false });
+  canvas.addEventListener("touchcancel", touchHandler(inputUp), { passive: false });
+}
 canvas.addEventListener("wheel", (e) => {
   e.preventDefault();
+  const p = localXY(e);
   const f = Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.05 : 0.0018));
-  zoomAt(f, e.offsetX, e.offsetY);
+  zoomAt(f, p.x, p.y);
 }, { passive: false });
-canvas.addEventListener("dblclick", (e) => zoomAt(2, e.offsetX, e.offsetY));
+canvas.addEventListener("dblclick", (e) => { const p = localXY(e); zoomAt(2, p.x, p.y); });
+// macOS Safari のトラックパッドのピンチ操作
+let gestureScale = 1;
+canvas.addEventListener("gesturestart", (e) => { e.preventDefault(); gestureScale = 1; });
+canvas.addEventListener("gesturechange", (e) => {
+  e.preventDefault();
+  const p = localXY(e);
+  zoomAt(e.scale / gestureScale, p.x, p.y);
+  gestureScale = e.scale;
+});
+canvas.addEventListener("gestureend", (e) => e.preventDefault());
 
 $("zoom-in").onclick = () => { const r = canvas.getBoundingClientRect(); zoomAt(1.6, r.width / 2, r.height / 2); };
 $("zoom-out").onclick = () => { const r = canvas.getBoundingClientRect(); zoomAt(1 / 1.6, r.width / 2, r.height / 2); };
@@ -743,7 +1060,7 @@ $("detail").addEventListener("input", (e) => {
   requestDraw();
 });
 $("fontscale").addEventListener("input", (e) => { state.opts.fontScale = Number(e.target.value); requestDraw(); });
-for (const [id, key] of [["lay-labels", "labels"], ["lay-outlines", "outlines"], ["lay-sat", "sat"], ["lay-night", "night"], ["lay-grid", "grid"], ["lay-limb", "limb"]]) {
+for (const [id, key] of [["lay-labels", "labels"], ["lay-mare", "mare"], ["lay-outlines", "outlines"], ["lay-sat", "sat"], ["lay-night", "night"], ["lay-grid", "grid"], ["lay-limb", "limb"]]) {
   $(id).addEventListener("change", (e) => { state.opts[key] = e.target.checked; requestDraw(); });
 }
 
@@ -813,4 +1130,4 @@ $("save-view").addEventListener("click", async () => {
 });
 
 // フォント読み込み後に再描画（初回の描画が代替フォントになるのを防ぐ）
-document.fonts?.ready.then(requestDraw);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(requestDraw);

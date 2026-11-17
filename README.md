@@ -5,6 +5,8 @@
 - 全体像・半月・三日月・望遠鏡での拡大写真に対応
 - 拡大するほど小さなクレーターや副クレーター（コペルニクスA など）まで表示
 - 地名にマウスを乗せる（スマホではタップ）と、ラテン名・種類・大きさ・月面座標を表示
+- 月の海の輪郭（LROC の境界データ）を表示。海の名前に乗せるとその海の範囲を強調。拡大すると細かい輪郭に切り替わります
+- JPEG / PNG / WebP のほか、TIFF・HEIC/HEIF もブラウザ内で変換して読み込み（ライブラリは必要なときだけ読み込み）
 - 注釈付き画像を JPEG / PNG で保存（画像全体／表示中の範囲）
 - 大きな画像は読み込み時に自動で縮小（表示・保存用は長辺 4096px、解析用は長辺 2048px）
 
@@ -42,6 +44,29 @@ unzip MOON_nomenclature_center_pts.zip
 python3 tools/build_features.py MOON_nomenclature_center_pts.dbf
 ```
 
+## 対応ブラウザ
+
+最新の Chrome / Edge / Firefox / Safari のほか、古いブラウザ（Chrome 103、Safari 12 程度）でも動くように書いています。
+
+- JavaScript は ES2018 までの構文のみ（`?.` や `??` は不使用）
+- Pointer Events・ResizeObserver・createImageBitmap がない環境では、マウス／タッチイベント・resize イベント・`<img>` で代替
+- EXIF の向きを自動で反映しないブラウザでは、JPEG の EXIF を読んで回転
+- Blob.arrayBuffer がないブラウザ向けの補完あり
+
+注意：SkySolver（skysolver.app）の証明書は Let's Encrypt の ISRG Root X2 系のチェーンです。この証明書を信頼していない古い OS（iOS 12 / macOS 10.14 世代など）では、アプリは表示されても解析サーバーに接続できない場合があります。OS を更新するか、端末に [ISRG Root X2](https://letsencrypt.org/certificates/) を追加してください。
+
+実機の古いブラウザでは試験していません。新しいブラウザで古い API を無効にした模擬環境で動作を確認しています。
+
+## 海の輪郭データ
+
+`data/mare.json` は `tools/build_mare.py` で、LROC Global Mare Boundaries（Nelson et al. 2014）から作っています。全体表示用（誤差約 0.12°）と拡大用（約 0.025°）の 2 段階に簡略化しています。
+
+```bash
+curl -LO https://pds.lroc.im-ldi.com/data/LRO-L-LROC-5-RDR-V1.0/LROLRC_2001/EXTRAS/SHAPEFILE/LROC_GLOBAL_MARE/LROC_GLOBAL_MARE_180.ZIP
+unzip LROC_GLOBAL_MARE_180.ZIP
+python3 tools/build_mare.py LROC_GLOBAL_MARE_180.SHP
+```
+
 ## ローカルで動かす
 
 ```bash
@@ -55,4 +80,6 @@ python3 -m http.server 8000
 - 月面の位置合わせ：[SkySolver.app](https://skysolver.app/) Moon API（無料・キー不要・レート制限あり）
 - 地名：[IAU / USGS Gazetteer of Planetary Nomenclature](https://planetarynames.wr.usgs.gov/)
 - 日本語名：[Wikidata](https://www.wikidata.org/)、日本語版 Wikipedia、手作業による補完
+- 海の輪郭：[LROC Global Mare Boundaries](https://data.lroc.im-ldi.com/lroc/view_rdr/SHAPEFILE_LROC_GLOBAL_MARE)（Nelson, D. M. et al. 2014, LPSC 45, 2861）
 - フォント：[Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
+- 画像変換ライブラリ（`lib/`、各ライセンスファイル同梱）：[UTIF.js](https://github.com/photopea/UTIF.js)（MIT）、[pako](https://github.com/nodeca/pako)（MIT）、[heic-to](https://github.com/hoppergee/heic-to)（LGPL-3.0）、[heic2any](https://github.com/alexcorvi/heic2any)（MIT）
